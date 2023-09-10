@@ -1,0 +1,78 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown__button {
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #333;
+    background: #333;
+    border-radius: 4px;
+    padding: 5px 10px 5px 12px;
+    margin-inline: 5px;
+    margin-bottom: 10px;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+.dropdown__button:hover,
+.dropdown__button.active {
+    opacity: 0.9;
+}
+.dropdown__content {
+    position: absolute;
+    z-index: 5;
+    top: 100%;
+    right: 0;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px 1px rgba(85, 85, 85, 0.1);
+    min-width: 150px;
+    padding: 10px 0;
+}
+.dropdown__content.hidden {
+    display: none;
+}
+::ng-deep .dropdown__label {
+    display: block;
+    cursor: pointer;
+}
+::ng-deep .dropdown__arrow {
+    display: inline-block;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+::ng-deep .dropdown__content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+::ng-deep  .dropdown__content li {
+    padding: 7px 15px;
+}
+::ng-deep .dropdown__content a,
+::ng-deep .dropdown__content button {
+    color: #333;
+    text-decoration: none;
+    background: none;
+    border: 0;
+    font-size: 16px;
+    padding: 0;
+    -webkit-transition: color 0.3s, width 0.3s;
+    transition: color 0.3s, width 0.3s;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+::ng-deep .dropdown__content a:hover,
+::ng-deep .dropdown__content a:active,
+::ng-deep .dropdown__content button:hover,
+::ng-deep .dropdown__content button:active,
+::ng-deep .dropdown__content li.active a,
+::ng-deep .dropdown__content li.active button {
+    color: #ffadad;
+}

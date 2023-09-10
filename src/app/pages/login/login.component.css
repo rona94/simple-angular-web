@@ -1,0 +1,26 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: 320px;
+}
+.login__box-login {
+    padding: 50px 25px;
+    min-width: 350px;
+    max-width: 100%;
+    margin: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #ffadad;
+    box-shadow: 0 0 5px 1px rgba(85, 85, 85, 0.3);
+}
+
+.login__logo {
+    color: #fff;
+    margin: 0 0 15px;
+}
+
+.login__box-login .btn {
+    margin-top: 15px;
+}

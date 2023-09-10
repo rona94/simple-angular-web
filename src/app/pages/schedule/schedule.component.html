@@ -1,0 +1,43 @@
+<app-dashboard>
+    <div class="box">
+        <app-table 
+            [data]="scheduleData" 
+            [options]="scheduleOptions" 
+            [currentPage]="currentPage"
+            [pageSize]="pageSize"
+            [total]="scheduleTotal"
+            (setPage)="setPage($event)">
+            <app-dropdown [hasArrow]="true" filter>
+                <ng-container slotButton>
+                    Sort By: {{ activeSort.value }}
+                </ng-container>
+                <ul slotList>
+                    <ng-container *ngFor="let s of sort">
+                        <li [class]="activeSort.value == s.value ? 'active' : ''">
+                            <button (click)="updateSort(s)">{{ s.value }}</button>
+                        </li>
+                    </ng-container>
+                </ul>
+            </app-dropdown>
+
+            <app-dropdown [hasArrow]="true" filter>
+                <ng-container slotButton>
+                    Filter Column
+                </ng-container>
+                <ul slotList>
+                    <ng-container *ngFor="let content of scheduleOptions.content" [formGroup]="filter">
+                    <li *ngIf="content.value && content.type != 'id'">
+                        <label class="dropdown__label">
+                            <div class="checkbox">
+                                <input type="checkbox" [formControlName]="content.name" (change)="updateData()">
+                                <span class="checkbox__check"></span>
+                            </div>
+                            {{ content.value }}
+                        </label>
+                    </li>
+                    </ng-container>
+                </ul>
+            </app-dropdown>
+        </app-table>
+    </div>
+</app-dashboard>

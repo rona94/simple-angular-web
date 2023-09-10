@@ -1,0 +1,51 @@
+<p>ng-model</p>
+<input type="text" [(ngModel)]="favMeat" placeholder="enter your fav meat" />
+<p class="bold {{color}} {{uppercase}}">testing <span [class]="orange">sss</span> {{favMeat}}</p>
+
+<p>ng-for loop</p>
+<div *ngFor="let t of test; let i = index;">
+    <ng-container *ngFor="let tt of t | orderBy: 'id' | filter: favMeat; let ii = index;">
+        <p>{{ tt.name }}<!-- - row:{{i}}  col:{{ii}}--></p>
+    </ng-container>
+</div>
+
+<p *ngIf="false">testing show</p> <!-- remove/show html in docs -->
+<p [hidden]="true">testing show show</p> <!-- hide/show html in docs -->
+
+<p (click)="testing($event, 'nyot')">CLICK ME!</p>
+
+<!-- <p class="animate-me-text" *ngIf="gg.get('name')?.value == 'hello'" [@animateMe]></p> -->
+<p class="animate-me-text" [@animateMe]="gg.get('name')?.value == 'hello' ? 'open' : 'closed'">
+    Animate me
+</p>
+
+<form [formGroup]="gg" (ngSubmit)="ggForm()" novalidate>
+    <input formControlName="name" type="text" (keyup)="copyName()" required>
+
+    <p>{{ gg.get("name")?.value }}</p>
+    <p>
+        Pristine - {{ gg.get("name")?.pristine }}<br/>
+        Dirty - {{ gg.get("name")?.dirty }}
+    </p>
+    <p>
+        untouched - {{ gg.get("name")?.untouched }}<br/>
+        touched - {{ gg.get("name")?.touched }}
+    </p>
+    <p>
+        valid - {{ gg.get("name")?.valid }}<br />
+        invalid - {{ gg.get("name")?.invalid }}
+    </p>
+    <br />
+</form>
+
+<img [src]="'http://www.gravatar.com/'+img_hash" alt="Description" />
+
+<app-slider 
+    text="nyotmi" 
+    (text2)="nyotmi($event)" 
+>
+    <p slotOne>Slot 1</p>
+    <p slotTwo>Slot 2</p>
+</app-slider>
+
+<p>hello: {{halot}}</p>

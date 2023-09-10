@@ -1,0 +1,34 @@
+.grade {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 15px 0;
+    /* border-radius: 4px; */
+}
+.grade__info {
+    padding-top: 10px;
+}
+.grade__info-school {
+    margin: 0 0 15px;
+}
+.grade__info-name,
+.grade__info-age {
+    margin: 5px 0;
+}
+.grade__grade {
+    width: 100%;
+}
+.grade__grade th,
+.grade__grade td {
+    border: 1px solid #333;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.grade__grade th:not(:first-child),
+.grade__grade td:not(:first-child) {
+    text-align: center;
+    width: 50px;
+}
+
+/* #f7ede2 */

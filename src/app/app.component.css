@@ -1,0 +1,193 @@
+::ng-deep html,
+::ng-deep body {
+    margin: 0;
+}
+::ng-deep body {
+    background-color: #f7f2ee;
+}
+
+/* text */
+::ng-deep * {
+    font-family: 'Roboto', sans-serif;
+}
+::ng-deep .text-uppercase {
+    text-transform: uppercase;
+}
+::ng-deep .text-bold {
+    font-weight: bold;
+}
+::ng-deep .text-left {
+    text-align: left;
+}
+::ng-deep .text-right {
+    text-align: right;
+}
+::ng-deep .text-center {
+    text-align: center;
+}
+
+/* text size */
+
+
+/* color */
+::ng-deep .text-error {
+    color: #cf4343;
+}
+::ng-deep .text-pink,
+::ng-deep .focus-pink:focus {
+    color: #ffadad;
+}
+::ng-deep .hover-pink {
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+::ng-deep .hover-pink:hover {
+    color: #eea2a2;
+}
+::ng-deep .color-red {
+    color: rgb(221, 30, 30);
+}
+
+/* spacing */
+::ng-deep .no-margin {
+    margin: 0;
+}
+
+/* align */
+::ng-deep .pull-left {
+    float: left;
+}
+::ng-deep .pull-right {
+    float: right;
+}
+
+/* row and column */
+::ng-deep .row {
+    overflow: auto;
+}
+
+/* form input */
+::ng-deep .form-group {
+    margin-bottom: 15px;
+}
+::ng-deep .form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+::ng-deep .form-input {
+    display: block;
+    padding: 7px 12px;
+    border-radius: 4px;
+    border: 2px solid #fff;
+    background-color: #fff;
+    box-shadow: 0 0 5px 1px rgba(85, 85, 85, 0.3);
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+::ng-deep .form-input-error {
+    border-color: #cf4343;
+}
+::ng-deep .form-input:focus {
+    outline: 2px solid #555;
+    outline-offset: -2px;
+}
+
+/* checkbox */
+::ng-deep .checkbox {
+    display: inline-block;
+    margin-right: 10px;
+}
+::ng-deep .checkbox input {
+    display: none;
+}
+::ng-deep .checkbox .checkbox__check {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+::ng-deep .checkbox input:checked ~ .checkbox__check {
+    border-color: #ffadad;
+}
+::ng-deep .checkbox input:checked ~ .checkbox__check:after {
+    content: '';
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    position: absolute;
+    border: solid #ffadad;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* buttons */
+::ng-deep .btn {
+    display: inline-block;
+    padding: 7px 12px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-transition: color 0.3s, background 0.3s, border-color 0.3s;
+    transition: color 0.3s, background 0.3s, border-color 0.3s;
+}
+::ng-deep .btn,
+::ng-deep .btn:focus {
+    color: #fff;
+    background-color: #555;
+    border-color:#555;
+}
+::ng-deep .btn:active,
+::ng-deep .btn:hover {
+    color: #333;
+    background-color: #fff;
+    border-color: #fff;
+}
+::ng-deep .btn-primary,
+::ng-deep .btn-primary:focus {
+    color: #f7f2ee;
+}
+::ng-deep .btn-primary:active,
+::ng-deep .btn-primary:hover {
+    color: #333;
+    background-color: #f7f2ee;
+    border-color: #f7f2ee;
+}
+
+/* icons */
+::ng-deep .icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: top;   
+}
+::ng-deep .sidebar__icon {
+    margin-right: 15px;
+}
+::ng-deep .icon-schedule {
+    background-image: url('../assets/images/calendar.png');
+}
+::ng-deep .icon-grade {
+    background-image: url('../assets/images/grade.png');
+}
+::ng-deep .icon-settings {
+    background-image: url('../assets/images/settings.png');
+}
+
+/* table */
+::ng-deep table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}

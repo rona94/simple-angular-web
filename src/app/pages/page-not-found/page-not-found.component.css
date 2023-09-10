@@ -1,0 +1,23 @@
+.page-not-found {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page-header {
+    font-size: 100px;
+    color: #ffadad;
+}
+
+.sub-header,
+.sub-header-dashboard {
+    color: #333;
+    font-weight: normal;
+    margin: 0;
+}
+
+.sub-header-dashboard {
+    font-size: 24px;
+}

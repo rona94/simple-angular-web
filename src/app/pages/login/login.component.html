@@ -1,0 +1,34 @@
+<div class="login">
+    <div class="login__box-login">
+        <h1 class="login__logo text-center">School Name</h1>
+        <form [formGroup]="formLogin" (ngSubmit)="submit()" novalidate>
+            <p class="text-error no-margin" [@animateMe]="hasError ? 'open' : 'closed'">*wrong username/password!</p>
+            
+            <div class="form-group">
+                <label class="form-label text-uppercase text-bold">Username </label>
+                <input 
+                    formControlName="username" 
+                    type="text" 
+                    class="form-input" 
+                    [class]="hasErrorEmail ? 'form-input-error' : ''" 
+                    (keyup)="updateInput('email')"
+                    required>
+            </div>
+    
+            <div class="form-group">
+                <label class="form-label text-uppercase text-bold">Password </label>
+                <input 
+                    formControlName="password" 
+                    type="password" 
+                    class="form-input" 
+                    [class]="hasErrorPass ? 'form-input-error' : ''" 
+                    (keyup)="updateInput('password')"
+                    required>
+            </div>
+
+            <div class="form-group text-right">
+                <input type="submit" class="btn btn-primary text-uppercase" value="Login" required>
+            </div>
+        </form>
+    </div>
+</div>

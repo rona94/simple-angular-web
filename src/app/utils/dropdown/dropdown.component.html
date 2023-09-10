@@ -1,0 +1,9 @@
+<div class="dropdown">
+    <button class="dropdown__button">
+        <ng-content select="[slotButton]"></ng-content>
+        <span class="dropdown__arrow" *ngIf="hasArrow"></span>
+    </button>
+    <div class="dropdown__content hidden">
+        <ng-content select="[slotList]"></ng-content>
+    </div>
+</div>

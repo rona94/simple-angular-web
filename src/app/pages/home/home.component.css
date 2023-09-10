@@ -1,0 +1,44 @@
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+input.ng-pristine {
+    border-color: red;
+}
+
+input.ng-untouched {
+    border-color: yellow;
+}
+
+input.ng-valid {
+    border-color: green;
+}
+
+/* 
+    ng-pristine  - form/input not used yet
+    ng-dirty     - form/input has been used
+
+    ng-untouched - input has not been touched
+    ng-touched   - input has been touched
+
+    ng-valid     - form field is valid
+    ng-invalid   - form field is not valid
+*/
+
+.animate-me-text {
+    /* min-width: 300px;
+    max-width: 300px;
+    background-color: red; */
+}
