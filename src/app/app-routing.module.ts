@@ -8,6 +8,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { ScheduleComponent } from './pages/schedule/schedule.component';
 import { GradeComponent } from './pages/grade/grade.component';
 import { SettingsComponent } from './pages/settings/settings.component';
+import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,12 @@ const routes: Routes = [
   {
     path: 'grade',
     component: GradeComponent,
+    canActivate: [AuthGuard],
+  },
+
+  {
+    path: 'user_profile',
+    component: UserProfileComponent,
     canActivate: [AuthGuard],
   },
 

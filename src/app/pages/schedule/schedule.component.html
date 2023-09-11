@@ -27,6 +27,7 @@
                 <ng-container *ngFor="let content of scheduleOptions.content" [formGroup]="filter">
                 <li *ngIf="content.value && content.type != 'id'">
                     <label class="dropdown__label">
+                        <!-- note: 9-11-23 - create new component for checkbox -->
                         <div class="checkbox">
                             <input type="checkbox" [formControlName]="content.name" (change)="updateData()">
                             <span class="checkbox__check"></span>

@@ -1,0 +1,54 @@
+<div class="box">
+    <h1 class="no-margin">Update User</h1>
+    <br />
+    <form class="form-user-update" [formGroup]="formUserUpdate" (ngSubmit)="submit()" novalidate>
+        <div class="form-group">
+            <label class="form-label text-uppercase text-bold">Firstname </label>
+            <input 
+                formControlName="firstname" 
+                type="text" 
+                class="form-input form-input-flat" 
+                required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label text-uppercase text-bold">Lastname </label>
+            <input 
+                formControlName="lastname" 
+                type="text" 
+                class="form-input form-input-flat" 
+                required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label text-uppercase text-bold">Age </label>
+            <input 
+                formControlName="age" 
+                type="text" 
+                class="form-input form-input-flat" 
+                required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label text-uppercase text-bold">Address </label>
+            <input 
+                formControlName="address" 
+                type="text" 
+                class="form-input form-input-flat" 
+                required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label text-uppercase text-bold">Contact </label>
+            <input 
+                formControlName="contact" 
+                type="text" 
+                class="form-input form-input-flat" 
+                required>
+        </div>
+
+        <div class="form-group text-right">
+            <input type="submit" class="btn btn-primary text-uppercase" value="Save" required>
+        </div>
+    </form>
+</div>

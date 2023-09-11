@@ -30,7 +30,7 @@ export class GradeComponent implements OnInit {
   async getData() {
     const result: any = await new Promise(resolve => {
       this.studentService.getGrade().subscribe(res => {
-        resolve(res);
+        resolve(res.results);
       });
     });
 

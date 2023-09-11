@@ -20,6 +20,8 @@ import { DropdownComponent } from './utils/dropdown/dropdown.component';
 import { GradeComponent } from './pages/grade/grade.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { TableComponent } from './utils/table/table.component';
+import { CheckboxComponent } from './utils/checkbox/checkbox.component';
+import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 
 export function initializeApp(preInitService: AppInitService) {
   return () => preInitService.initialize();
@@ -39,7 +41,9 @@ export function initializeApp(preInitService: AppInitService) {
     DropdownComponent,
     GradeComponent,
     SettingsComponent,
-    TableComponent
+    TableComponent,
+    CheckboxComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

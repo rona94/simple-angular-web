@@ -84,7 +84,7 @@ export class ScheduleComponent implements OnInit {
       this.currentPage,
       this.pageSize
     ).subscribe(res => {
-      this.scheduleData = res;
+      this.scheduleData = res.results;
     });
   }
 
