@@ -11,7 +11,8 @@ import { AuthService } from '../../auth/auth.service';
 export class ScheduleComponent implements OnInit {
   scheduleData: object = [];
   scheduleOptions: any = {};
-  scheduleTotal = 6; // need to get total in api
+  scheduleTotal: number = 6; // need to get total in api
+  user: any = null;
 
   // sort by
   filter: FormGroup;
@@ -68,10 +69,15 @@ export class ScheduleComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getData(true);
+    setTimeout(() => {
+      this.user = this.authService.user;
+      this.setDataOptions(this.user.role_id == 3);
+    }, 30);
+    
+    this.getData();
   }
 
-  getData(isFirstLoad: boolean = false): void {
+  getData(): void {
     this.scheduleService.getSchedule(
       this.activeSort.sort,
       this.activeSort.order,
@@ -79,10 +85,6 @@ export class ScheduleComponent implements OnInit {
       this.pageSize
     ).subscribe(res => {
       this.scheduleData = res;
-
-      if (isFirstLoad) {
-        this.setDataOptions(this.authService.user.role_id == 3);
-      }
     });
   }
 

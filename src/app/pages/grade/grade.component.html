@@ -1,48 +1,46 @@
-<app-dashboard>
-    <div class="box">
-        <div class="grade">
-        
-            <table class="grade__grade">
-                <tr>
-                    <td colspan="5">
-                        <div class="grade__info">
-                            <h1 class="text-center no-margin">Reports Card</h1>
-                            <p class="grade__info-school text-center"><em>School Name</em></p>
-                            <p class="grade__info-name"><strong>Name:</strong> &nbsp;<span>{{ studentName }}</span></p>
-                            <p class="grade__info-age"><strong>Age:</strong> &nbsp;<span>{{ studentAge }}</span></p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>Subject</th>
-                    <th>1st</th>
-                    <th>2nd</th>
-                    <th>3rd</th>
-                    <th>4th</th>
-                </tr>
-                <tr *ngFor="let grade of grades">
-                    <td>{{ grade.name }}</td>
-                    <td [class]="grade.grade1 > 74 ? '' : 'color-red'">{{ grade.grade1 || '' }}</td>
-                    <td [class]="grade.grade2 > 74 ? '' : 'color-red'">{{ grade.grade2 || '' }}</td>
-                    <td [class]="grade.grade3 > 74 ? '' : 'color-red'">{{ grade.grade3 || '' }}</td>
-                    <td [class]="grade.grade4 > 74 ? '' : 'color-red'">{{ grade.grade3 || '' }}</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>Average</td>
-                    <td [class]="getAverage(0) > 74 ? '' : 'color-red'">{{ getAverage(0) || ''}}</td>
-                    <td [class]="getAverage(1) > 74 ? '' : 'color-red'">{{ getAverage(1) || ''}}</td>
-                    <td [class]="getAverage(2) > 74 ? '' : 'color-red'">{{ getAverage(2) || ''}}</td>
-                    <td [class]="getAverage(3) > 74 ? '' : 'color-red'">{{ getAverage(3) || ''}}</td>
-                </tr>
-            </table>
-        </div>
-
+<div class="box">
+    <div class="grade">
+    
+        <table class="grade__grade">
+            <tr>
+                <td colspan="5">
+                    <div class="grade__info">
+                        <h1 class="text-center no-margin">Reports Card</h1>
+                        <p class="grade__info-school text-center"><em>School Name</em></p>
+                        <p class="grade__info-name"><strong>Name:</strong> &nbsp;<span>{{ studentName }}</span></p>
+                        <p class="grade__info-age"><strong>Age:</strong> &nbsp;<span>{{ studentAge }}</span></p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>Subject</th>
+                <th>1st</th>
+                <th>2nd</th>
+                <th>3rd</th>
+                <th>4th</th>
+            </tr>
+            <tr *ngFor="let grade of grades">
+                <td>{{ grade.name }}</td>
+                <td [class]="grade.grade1 > 74 ? '' : 'color-red'">{{ grade.grade1 || '' }}</td>
+                <td [class]="grade.grade2 > 74 ? '' : 'color-red'">{{ grade.grade2 || '' }}</td>
+                <td [class]="grade.grade3 > 74 ? '' : 'color-red'">{{ grade.grade3 || '' }}</td>
+                <td [class]="grade.grade4 > 74 ? '' : 'color-red'">{{ grade.grade3 || '' }}</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Average</td>
+                <td [class]="getAverage(0) > 74 ? '' : 'color-red'">{{ getAverage(0) || ''}}</td>
+                <td [class]="getAverage(1) > 74 ? '' : 'color-red'">{{ getAverage(1) || ''}}</td>
+                <td [class]="getAverage(2) > 74 ? '' : 'color-red'">{{ getAverage(2) || ''}}</td>
+                <td [class]="getAverage(3) > 74 ? '' : 'color-red'">{{ getAverage(3) || ''}}</td>
+            </tr>
+        </table>
     </div>
-</app-dashboard>
+
+</div>

@@ -19,7 +19,6 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { DropdownComponent } from './utils/dropdown/dropdown.component';
 import { GradeComponent } from './pages/grade/grade.component';
 import { SettingsComponent } from './pages/settings/settings.component';
-import { DashboardComponent } from './templates/dashboard/dashboard.component';
 import { TableComponent } from './utils/table/table.component';
 
 export function initializeApp(preInitService: AppInitService) {
@@ -40,7 +39,6 @@ export function initializeApp(preInitService: AppInitService) {
     DropdownComponent,
     GradeComponent,
     SettingsComponent,
-    DashboardComponent,
     TableComponent
   ],
   imports: [
